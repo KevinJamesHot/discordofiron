@@ -5,7 +5,7 @@ focus_tree = {
 		factor = 0
 		
 		modifier = {
-			add = 20
+			add = 10
 			tag = GER
 		}
 	}
@@ -13,7 +13,7 @@ focus_tree = {
 	default = no
 
 	focus = {
-		id = GER_gamer_reconstrcution
+		id = GER_four_year_plan
 		icon = GFX_goal_generic_construction
 		x = 6
 		y = 0
@@ -24,7 +24,7 @@ focus_tree = {
 		
 		completion_reward = {
 			add_tech_bonus = {
-				name = GER_gamer_reconstrcution
+				name = GER_four_year_plan
 				bonus = 0.5
 				uses = 2
 				category = industry
@@ -36,12 +36,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_anti_chad_wall
+		id = GER_west_wall
 		icon = GFX_goal_generic_construct_military
-		prerequisite = { focus = GER_gamer_reconstrcution }
+		prerequisite = { focus = GER_four_year_plan }
 		x = -5
 		y = 1
-		relative_position_id = GER_gamer_reconstrcution
+		relative_position_id = GER_four_year_plan
 		cost = 10
 		ai_will_do = {
 			factor = 8
@@ -126,9 +126,9 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_gameriechwall
+		id = GER_atlantikwall
 		icon = GFX_focus_generic_coastal_fort
-		prerequisite = { focus = GER_anti_chad_wall }
+		prerequisite = { focus = GER_west_wall }
 		available = {
 			OR = {
 				FRA = { has_capitulated = yes }
@@ -138,7 +138,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		x = -1
 		y = 1
-		relative_position_id = GER_anti_chad_wall
+		relative_position_id = GER_west_wall
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -608,7 +608,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_howeall
+		id = GER_ostwall
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = GER_west_wall }
 		available = {
@@ -634,7 +634,7 @@ focus_tree = {
 		}
 		x = 1
 		y = 1
-		relative_position_id = GER_anti_chad_wall
+		relative_position_id = GER_west_wall
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -987,12 +987,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_gamerist_construction_strategy
+		id = GER_autarky
 		icon = GFX_goal_generic_construct_civilian
-		prerequisite = { focus = GER_gamer_reconstrcution }
+		prerequisite = { focus = GER_four_year_plan }
 		x = 4
 		y = 1
-		relative_position_id = GER_gamer_reconstrcution
+		relative_position_id = GER_four_year_plan
 		cost = 10
 		ai_will_do = {
 			factor = 9
@@ -1014,13 +1014,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_seize_chad_productions
+		id = GER_hermann_goring_werke
 		icon = GFX_goal_generic_construct_civ_factory
 		dynamic = yes
-		prerequisite = { focus = GER_gamerist_construction_strategy }
+		prerequisite = { focus = GER_autarky }
 		x = 2
 		y = 1
-		relative_position_id = GER_gamerist_construction_strategy
+		relative_position_id = GER_autarky
 		cost = 10
 		ai_will_do = {
 			factor = 9
@@ -1093,13 +1093,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_rationed_transportation
+		id = GER_kdf_wagen
 		icon = GFX_goal_generic_construct_civ_factory
 		dynamic = yes
 		prerequisite = { focus = GER_hermann_goring_werke }
 		x = 0
 		y = 1
-		relative_position_id = GER_seize_chad_productions
+		relative_position_id = GER_hermann_goring_werke
 		cost = 10
 		ai_will_do = {
 			factor = 5
@@ -1172,12 +1172,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_revolutionist_oil
+		id = GER_coal_liquidization
 		icon = GFX_goal_generic_oil_refinery
-		prerequisite = { focus = GER_gamerist_construction_strategy }
+		prerequisite = { focus = GER_autarky }
 		x = 0
 		y = 1
-		relative_position_id = GER_gamerist_construction_strategy
+		relative_position_id = GER_autarky
 		cost = 10
 		ai_will_do = {
 			factor = 4
@@ -1211,12 +1211,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_revolutionist_rubber
+		id = GER_synthetic_rubber
 		icon = GFX_focus_generic_rubber
-		prerequisite = { focus = GER_revolutionist_oil }
+		prerequisite = { focus = GER_coal_liquidization }
 		x = 0
 		y = 1
-		relative_position_id = GER_revolutionist_oil
+		relative_position_id = GER_coal_liquidization
 		cost = 10
 		ai_will_do = {
 			factor = 4
@@ -1238,13 +1238,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_gamerist_technocracy
+		id = GER_extra_tech_slot
 		icon = GFX_focus_research
 		text = extra_tech_slot
-		prerequisite = { focus = GER_rationed_transportation = GER_revolutionist_oil }
+		prerequisite = { focus = GER_kdf_wagen focus = GER_synthetic_rubber }
 		x = -1
 		y = 1
-		relative_position_id = GER_rationed_transportation
+		relative_position_id = GER_kdf_wagen
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -1258,12 +1258,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_enhanced_transportation
+		id = GER_autobahn
 		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = GER_gamerist_construction_strategy }
+		prerequisite = { focus = GER_autarky }
 		x = -2
 		y = 1
-		relative_position_id = GER_gamerist_construction_strategy
+		relative_position_id = GER_autarky
 		cost = 10
 		ai_will_do = {
 			factor = 12
@@ -1327,13 +1327,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_gamer_war_economy
+		id = GER_german_war_economy
 		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = GER_enhanced_transportation }
-		mutually_exclusive = { focus = GER_revolution_war_economy }
+		prerequisite = { focus = GER_autobahn }
+		mutually_exclusive = { focus = GER_integrate_war_economies }
 		x = 0
 		y = 1
-		relative_position_id = GER_enhanced_transportation
+		relative_position_id = GER_autobahn
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -1415,12 +1415,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_improve_infrastructure
+		id = GER_grosraumwirtschaft
 		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = GER_gamer_reconstrcution }
+		prerequisite = { focus = GER_four_year_plan }
 		x = 0
 		y = 1
-		relative_position_id = GER_gamer_reconstrcution
+		relative_position_id = GER_four_year_plan
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -1434,10 +1434,10 @@ focus_tree = {
 	focus = {
 		id = GER_align_hungary
 		icon = GFX_goal_generic_positive_trade_relations
-		prerequisite = { focus = GER_improve_infrastructure }
+		prerequisite = { focus = GER_grosraumwirtschaft }
 		x = 0
 		y = 1
-		relative_position_id = GER_improve_infrastructure
+		relative_position_id = GER_grosraumwirtschaft
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -1491,12 +1491,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_aid_the_fraternity
+		id = GER_align_romania
 		icon = GFX_goal_generic_positive_trade_relations
-		prerequisite = { focus = GER_improve_infrastructure }
+		prerequisite = { focus = GER_grosraumwirtschaft }
 		x = -2
 		y = 1
-		relative_position_id = GER_improve_infrastructure
+		relative_position_id = GER_grosraumwirtschaft
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -1550,11 +1550,11 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_outsourced_economies
+		id = GER_integrate_war_economies
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = GER_align_hungary }
-		prerequisite = { focus = GER_aid_the_fraternity }
-		mutually_exclusive = { focus = GER_gamer_war_economy }
+		prerequisite = { focus = GER_align_romania }
+		mutually_exclusive = { focus = GER_german_war_economy }
 		x = 0
 		y = 1
 		relative_position_id = GER_align_hungary
