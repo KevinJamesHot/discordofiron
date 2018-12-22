@@ -173,11 +173,13 @@ set_politics = {
 create_country_leader = {
 	name = "Austin Skiba"
 	desc = "POLITICS_BENITO_MUSSOLINI_DESC"
-	picture = "Portrait_Italy_Benito_Mussolini.dds"
+	picture = "AustinSkibaHOI4.dds"
 	expire = "1965.1.1"
-	ideology = fascism_ideology
+	ideology = monarchogamerism
 	traits = {
-		
+		gamer_revolutionary
+		financial_expert
+		computer_assistant
 	}
 }
 

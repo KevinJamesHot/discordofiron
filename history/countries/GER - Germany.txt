@@ -252,13 +252,14 @@ add_ideas = GER_mefo_bills_1
 activate_mission = GER_mefo_bills_mission
 
 create_country_leader = {
-	name = "Adolf Hitler"
+	name = "John Howe"
 	desc = "POLITICS_ADOLF_HITLER_DESC"
-	picture = "Portrait_Germany_Adolf_Hitler.dds"
+	picture = "JohnHowe3HOI4.dds"
 	expire = "1965.1.1"
-	ideology = nazism
+	ideology = natgamerism
 	traits = {
 		dictator
+		gamer_revolutionary
 	}
 }
 

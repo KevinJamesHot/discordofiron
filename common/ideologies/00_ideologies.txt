@@ -74,10 +74,10 @@ ideologies = {
 			anarchist_communism = {
 			}
 			
-			gamerism = {
-			}
-			
 			popularism = {
+			}
+
+			hitchenism = {
 			}
 		}
 		
@@ -127,6 +127,15 @@ ideologies = {
 			
 			rexism = {
 			}
+			
+			gamerism = {
+			}
+
+			natgamerism = {
+			}
+
+			monarchogamerism = {
+			}
 		}
 		
 		dynamic_faction_names = {
@@ -169,6 +178,9 @@ ideologies = {
 			}
 			
 			centrism = {
+			}
+
+			fratism = {
 			}
 		}
 
